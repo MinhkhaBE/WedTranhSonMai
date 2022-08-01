@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.625" name="qlBanHang">
+  <DataContextMoniker Name="/qlBanHangDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5e1e6a17-f178-4f75-970d-fa84a25b324d" absoluteBounds="3.75, 4.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/qlBanHangDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75125d13-51ea-48a3-bdca-fb960eafe617" absoluteBounds="3.765, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1bfe7f62-b43b-42f0-99d4-f93e4cf7fcc0" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/qlBanHangDataContext/tranhsonmai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d73548b0-dbeb-4871-9ced-5f43926acd92" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2c9c969-5a25-47db-acdb-e87f23fe0ebd" absoluteBounds="6.25, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/qlBanHangDataContext/CTDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7023164e-ec01-4129-a3bf-3624940b3073" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e90dd160-990f-407e-b164-bf941c8922f9" absoluteBounds="3.5, 8.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/qlBanHangDataContext/DonDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a4c6a5d-d05c-4337-b3b5-11fe5b3db229" absoluteBounds="3.515, 8.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69886df9-d097-4948-8787-7cd18ba36f2d" absoluteBounds="0.75, 8, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/qlBanHangDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a30d6aef-e302-4b5a-9c15-e8d89034b08f" absoluteBounds="0.765, 8.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a042656-5a79-415a-8ab2-4c0cda263518" absoluteBounds="0.75, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/qlBanHangDataContext/Loaitranhsonmai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c07712f-3673-4e71-aa53-10ccb3f1cbb4" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="057eece4-2e0e-474c-bc91-67ec37dd5a19" absoluteBounds="0.75, 5.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/qlBanHangDataContext/NhaCungCap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdb83625-5945-4a17-b877-970bd1d8647a" absoluteBounds="0.765, 5.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.16429768880208); (6.25 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlBanHangDataContext/tranhsonmai/tranhsonmai_CTDatHang" />
+      <nodes>
+        <classShapeMoniker Id="1bfe7f62-b43b-42f0-99d4-f93e4cf7fcc0" />
+        <classShapeMoniker Id="e2c9c969-5a25-47db-acdb-e87f23fe0ebd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.23159912109375); (7.25 : 9.23159912109375); (7.25 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlBanHangDataContext/DonDatHang/DonDatHang_CTDatHang" />
+      <nodes>
+        <classShapeMoniker Id="e90dd160-990f-407e-b164-bf941c8922f9" />
+        <classShapeMoniker Id="e2c9c969-5a25-47db-acdb-e87f23fe0ebd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.23159912109375); (3.5 : 9.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlBanHangDataContext/KhachHang/KhachHang_DonDatHang" />
+      <nodes>
+        <classShapeMoniker Id="69886df9-d097-4948-8787-7cd18ba36f2d" />
+        <classShapeMoniker Id="e90dd160-990f-407e-b164-bf941c8922f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.22199625651042); (3.5 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlBanHangDataContext/Loaitranhsonmai/Loaitranhsonmai_tranhsonmai" />
+      <nodes>
+        <classShapeMoniker Id="9a042656-5a79-415a-8ab2-4c0cda263518" />
+        <classShapeMoniker Id="1bfe7f62-b43b-42f0-99d4-f93e4cf7fcc0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.57619466145833); (3.59375 : 6.57619466145833); (3.59375 : 3.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlBanHangDataContext/NhaCungCap/NhaCungCap_tranhsonmai" />
+      <nodes>
+        <classShapeMoniker Id="057eece4-2e0e-474c-bc91-67ec37dd5a19" />
+        <classShapeMoniker Id="1bfe7f62-b43b-42f0-99d4-f93e4cf7fcc0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

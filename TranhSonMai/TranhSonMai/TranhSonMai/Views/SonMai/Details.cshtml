@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayuotDetails.cshtml";
+}
+<div class="main">
+    <div class="shop_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 single_left">
+                    <div class="single_image">
+                        <ul id="etalage">
+                            <li>
+                                <a href="optionallink.html">
+                                    <img class="etalage_thumb_image" src="~/images/@Model.AnhMinhHoa" />
+                                    <img class="etalage_source_image" src="~/images/@Model.AnhMinhHoa" />
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- end product_slider -->
+                    <div class="single_right">
+                        <h3>@Model.Tentranhsonmai</h3>
+                        <p class="m_10">@Model.MoTa</p>
+                        <ul class="options">
+                            <h4 class="m_12">@Model.GiaBan Đ</h4>
+                        </ul>
+
+                        <div class="btn_form">
+                            <a href="@Url.Action("ThemGioHang", "GioHang", new { @iMaThuoc = Model.Matranhsonmai, @strURL=Request.Url.ToString()} )" style="color:red">
+                                Thêm Vào Giỏ
+                            </a>
+                        </div>
+                        <div class="social_buttons">
+                            <button type="button" class="btn1 btn1-default1 btn1-twitter" onclick="">
+                                <i class="icon-twitter"></i> Tweet
+                            </button>
+                            <button type="button" class="btn1 btn1-default1 btn1-facebook" onclick="">
+                                <i class="icon-facebook"></i> Share
+                            </button>
+                            <button type="button" class="btn1 btn1-default1 btn1-google" onclick="">
+                                <i class="icon-google"></i> Google+
+                            </button>
+                            <button type="button" class="btn1 btn1-default1 btn1-pinterest" onclick="">
+                                <i class="icon-pinterest"></i> Pinterest
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+
+            </div>
+         
+        </div>
+    </div>
+</div>
+

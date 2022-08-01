@@ -1,0 +1,234 @@
+﻿<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Snow Bootstrap Website Template | Home :: w3layouts</title>
+    <link href="~/Content/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/Content/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!--<script src="~/Scripts/jquery.easydropdown.js"></script>-->
+    <!--start slider -->
+    <link rel="stylesheet" href="~/Content/fwslider.css" media="all" />
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/fwslider.js"></script>
+    <!--end slider -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function () {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function () {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function (e) {
+                var $clicked = $(e.target);
+                if (!$clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function () {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-left">
+                        <div class="logo">
+                            <a href="@Url.Action("index","SonMai")"><img src="~/images/logo.png" alt="" /></a>
+                        </div>
+                        <div class="menu">
+                            <a class="toggleMenu"><img src="~/images/nav.png" alt="" /></a>
+                            <ul class="nav" id="nav">
+                                <li><a href="@Url.Action("DangKy","NguoiDung")">Đăng Ký</a></li>
+                                <li><a href="@Url.Action("DangNhap","NguoiDung")">Đăng Nhập</a></li>
+                                <li><a href="@Url.Action("DatHang","GioHang")">Đặt Hàng</a></li>
+                                <li><a href="@Url.Action("GioHang","GioHang")">Giỏ Hàng</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                            <script type="text/javascript" src="~/Scripts/responsive-nav.js"></script>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_right">
+                        <!-- start search-->
+                        <div class="search-box">
+                            <div id="sb-search" class="sb-search">
+                                <form>
+                                    <input class="sb-search-input" placeholder="Nhập Thứ Bạn Cần Tìm..." type="search" name="search" id="search" />
+                                    <input class="sb-search-submit" type="submit" value="" />
+                                    <span class="sb-icon-search"> </span>
+                                </form>
+                            </div>
+                        </div>
+                        <!----search-scripts---->
+                        <script src="~/Scripts/classie.js"></script>
+                        <script src="~/Scripts/uisearch.js"></script>
+                        <script>
+                            new UISearch(document.getElementById('sb-search'));
+                        </script>
+                        <!----//search-scripts---->
+                      
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <!-- start slider -->
+        <div id="fwslider" style="height:400px"> 
+            <div class="slider_container">
+                <div class="slide">
+                    <!-- Slide image -->
+                    <img src="~/images/bia2.jpg" class="img-responsive" alt="" />
+                    <!-- /Slide image -->
+                    <!-- Texts container -->
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <!-- Text title -->
+                            <h1 class="title">Tranh<br />Sơn Mài</h1>
+                            <!-- /Text title -->
+                            
+                        </div>
+                    </div>
+                    <!-- /Texts container -->
+                </div>
+                <!-- /Duplicate to create more slides -->
+                <div class="slide">
+                    <img src="~/images/bia5.jpg" class="img-responsive" alt="" />
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h1 class="title">Bình<br />Sơn Mài</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/images/bia3.jpg" class="img-responsive" alt="" />
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h1 class="title">Hộp<br />Sơn Mài</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/images/bia4.jpg" class="img-responsive" alt="" />
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h1 class="title">Khay<br />Sơn Mài</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/images/bia1.jpg" class="img-responsive" alt="" />
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h1 class="title">Đèn<br />Sơn Mài</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/slide -->
+            </div>
+            <div class="timers"></div>
+            <div class="slidePrev"><span></span></div>
+            <div class="slideNext"><span></span></div>
+        </div>
+        <!--/slider -->
+    </div>
+    <div class="main">
+        <div class="content-top">
+            <h2>Sơn Mài</h2>
+            <p>Mang Vẻ Đẹp Phong Cách Văn Hóa Việt Nam Xa Xưa</p>
+            <div class="close_but"><i class="close1"> </i></div>
+           
+            <script type="text/javascript" src="~/Scripts/jquery.flexisel.js"></script>
+        </div>
+    </div>
+    </div>
+    @RenderBody()
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Danh Mục Sản Phẩm</h4>
+                        <li>@Html.Action("ChuDe","SonMai")</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Nhà Cung Cấp</h4>
+                        <li>@Html.Action("NhaCC", "SonMai")</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Giới Thiệu</h4>
+                        <h4>Cơ sở chúng tôi chân
+                         thành biết ơn về sự tín nhiệm của quý khách hàng đã dành cho chúng tôi trong thời gian qua và trong những thời gian sắp tới.
+                            Chúng tôi  đã, đang và sẽ  góp phần vào việc lưu giữ những giá trị truyền thống  tốt đẹp của văn hóa Việt.
+                            Hãy đến với chúng tôi vì sự hài lòng và tin tưởng của quý khách.
+                            <br />Trân trọng cảm ơn</h4>
+                    </ul>
+                </div>
+               
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Liên Hệ Với Chúng Tôi</h4>
+                        <div class="footer_search">
+                            <form>
+                                <input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}" />
+                                <input type="submit" value="Go" />
+                            </form>
+                        </div>
+                        <ul class="social">
+                            <li class="facebook"><a href="#"><span> </span></a></li>
+                            <li class="twitter"><a href="#"><span> </span></a></li>
+                            <li class="instagram"><a href="#"><span> </span></a></li>
+                            <li class="pinterest"><a href="#"><span> </span></a></li>
+                            <li class="youtube"><a href="#"><span> </span></a></li>
+                        </ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer_bottom">                <div class="copy">
+                    <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+                </div>
+                <dl id="sample" class="dropdown">
+                    
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

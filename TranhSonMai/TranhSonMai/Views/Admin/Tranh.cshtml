@@ -1,0 +1,75 @@
+﻿@model IEnumerable<TranhSonMai.Models.tranhsonmai>
+
+@{
+    ViewBag.Title = "Tranh";
+    Layout = "~/Views/Shared/_LayoutAdmintranh.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Thêm mới", "themmoitranh")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên tranh sơn mài
+        </th>
+        <th>
+            Giá bán
+        </th>
+        <th>
+            Mô tả
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th>
+           Ngày nhập
+        </th>
+        <th>
+            Số lượng
+        </th>
+        <th>
+            Mã loại
+        </th>
+        <th>
+            nhà CC
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tentranhsonmai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            <img src="@Url.Content("~/images/" + item.AnhMinhHoa)"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayNhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongTon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaitranhsonmai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNCC)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "suatranh", new { id=item.Matranhsonmai }) |
+            @Html.ActionLink("Xóa", "xoatranh", new { id=item.Matranhsonmai })
+        </td>
+    </tr>
+}
+
+</table>

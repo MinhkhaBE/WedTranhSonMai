@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TranhSonMai.Models.Loaitranhsonmai>
+
+@{
+    ViewBag.Title = "Loai";
+    Layout = "~/Views/Shared/_LayoutAdminloai.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Thêm mới", "themmoiloai")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên loại tranh sơn mài
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoaitranhsonmai)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaLoaitranhsonmai }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaLoaitranhsonmai })
+        </td>
+    </tr>
+}
+
+</table>

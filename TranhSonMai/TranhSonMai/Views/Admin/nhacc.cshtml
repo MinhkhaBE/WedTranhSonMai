@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TranhSonMai.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "nhacc";
+    Layout = "~/Views/Shared/_LayoutAdminncc.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Thêm mới", "themmoincc")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Tên nhà cung cấp
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            SĐT
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaNCC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaNCC })
+        </td>
+    </tr>
+}
+
+</table>

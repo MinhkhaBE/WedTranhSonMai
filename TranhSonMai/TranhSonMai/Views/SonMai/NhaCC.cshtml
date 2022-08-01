@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TranhSonMai.Models.NhaCungCap>
+
+@foreach (var ncc in Model)
+{
+    <a href="@Url.Action("SPTheoNhaCC", "SonMai", new { id = ncc.MaNCC})" class="list-group-item">
+        @ncc.TenNCC
+    </a>
+}
+
+
